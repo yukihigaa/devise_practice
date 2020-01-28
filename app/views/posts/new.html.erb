@@ -1,8 +1,11 @@
 <%= render 'posts/navbar' %>
-<%= render 'shared/flash' %>
 
-<h1>New Post</h1>
+<div class="container text-center">
+  <%= render 'shared/flash' %>
 
-<%= render 'form', post: @post %>
+  <h1 class="font-weight-bolder">New Post</h1>
 
-<%= link_to 'Back', posts_path %>
+  <%= render 'form', post: @post %>
+
+  <%= link_to 'Back', posts_path %>
+</div>

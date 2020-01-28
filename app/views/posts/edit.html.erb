@@ -1,9 +1,12 @@
 <%= render 'posts/navbar' %>
-<%= render 'shared/flash' %>
 
-<h1>Editing Post</h1>
+<div class="container text-center">
+  <%= render 'shared/flash' %>
 
-<%= render 'form', post: @post %>
+  <h1 class="font-weight-bolder">Editing Post</h1>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+  <%= render 'form', post: @post %>
+
+  <%= link_to 'Show', @post %> |
+  <%= link_to 'Back', posts_path %>
+</div>

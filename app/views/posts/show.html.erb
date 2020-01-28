@@ -1,14 +1,28 @@
 <%= render 'posts/navbar' %>
+<%= render 'shared/flash' %>
 
-<p>
-  <strong>Titile:</strong>
-  <%= @post.titile %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+  <h1 class="font-weight-bolder text-center">Show</h1>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Titile</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @post.titile %></td>
+        <td><%= @post.body %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-center">
+    <%= link_to 'Edit', edit_post_path(@post) %> |
+    <%= link_to 'Back', posts_path %>
+  </div>
+
+</div>
